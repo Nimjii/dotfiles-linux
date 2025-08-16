@@ -6,7 +6,6 @@ return {
   config = function ()
     require('mini.git').setup()
     require('mini.icons').setup()
-    require('mini.pairs').setup()
 
     require('mini.ai').setup({
       custom_textobjects = {
