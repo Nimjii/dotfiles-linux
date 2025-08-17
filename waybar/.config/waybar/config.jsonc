@@ -1,0 +1,48 @@
+{
+    "layer": "top",
+    "modules-left": [
+        "clock",
+        "cpu",
+        "memory",
+        "disk"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "hyprland/language"
+    ],
+    "clock": {
+        "timezone": "Europe/Vienna",
+        "format": "{:%A %d, %H:%M}"
+    },
+    "cpu": {
+        "format": "{usage}% "
+    },
+    "memory": {
+        "format": "{}% 󰍛"
+    },
+    "disk": {
+        "format": "{percentage_free}% "
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": " {format_source}",
+        "format-icons": {
+          "default": [
+            "",
+            ""
+          ]
+        }
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-ethernet": "{ifname} 󰈀",
+        "format-disconnected": " ",
+        "max-length": 50
+    },
+    "hyprland/language": {
+        "format": "{} ",
+        "format-de": "GER",
+        "format-en": "DVORAK"
+    }
+}
