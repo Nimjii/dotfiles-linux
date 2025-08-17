@@ -1,0 +1,7 @@
+[[search_dirs]]
+path = "/home/lspreitzer/projects"
+depth = 10
+
+[[search_dirs]]
+path = "/home/lspreitzer/dotfiles"
+depth = 1
