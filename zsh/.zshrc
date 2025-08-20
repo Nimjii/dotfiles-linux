@@ -11,6 +11,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 
 path=("/home/lspreitzer/.local/share/bob/nvim-bin" $path)
+path=("/home/lspreitzer/.cargo/bin" $path)
 
 export PATH
 
