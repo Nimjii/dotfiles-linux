@@ -11,3 +11,5 @@
     clone-for-worktrees = "!sh $HOME/git-clone-for-worktrees.sh"
 [rerere]
     enabled = true
+[init]
+	defaultBranch = main
