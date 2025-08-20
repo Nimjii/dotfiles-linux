@@ -44,6 +44,14 @@ return {
       },
     })
 
+    require('mini.pairs').setup({
+      modes = { insert = false },
+    })
+
+    require('mini.pairs').map('i', '(', { action = 'open', pair = '()', neigh_pattern = '[^\\].' })
+    require('mini.pairs').map('i', '{', { action = 'open', pair = '{}', neigh_pattern = '[^\\].' })
+    require('mini.pairs').map('i', '[', { action = 'open', pair = '[]', neigh_pattern = '[^\\].' })
+
     MiniIcons.mock_nvim_web_devicons()
   end,
   keys = {
