@@ -9,6 +9,8 @@ require('which-key').add({
   { '<leader><S-q>', group = 'Quickfix', icon = ' ' },
 })
 
+vim.keymap.set({ 'n' }, '<leader>e', '<cmd>edit %:p:h<cr>', { desc = 'Open file explorer' })
+
 -- Qol mappings
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set({ 'n' }, '<C-z>', '<Nop>', { noremap = true, silent = true })

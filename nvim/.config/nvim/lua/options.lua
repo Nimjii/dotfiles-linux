@@ -28,6 +28,8 @@ vim.o.wrap = false
 vim.wo.relativenumber= true
 vim.wo.signcolumn= 'yes'
 
+vim.g.netrw_localcopydircmd = 'cp -r'
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 vim.g.t_ZH = '[3m'

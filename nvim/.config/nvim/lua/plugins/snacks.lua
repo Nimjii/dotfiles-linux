@@ -13,9 +13,6 @@ return {
         enabled = false,
       },
     },
-    explorer = {
-      replace_netrw = true,
-    },
     indent = {
       animate = {
         enabled = false,
@@ -106,7 +103,6 @@ return {
     { 'gr', mode = 'n', function () require('snacks.picker').lsp_references() end, desc = 'Go to references' },
     { 'gt', mode = 'n', function () require('snacks.picker').lsp_type_definitions() end, desc = 'Type definition' },
     { '<leader>b', mode = 'n', function () require('snacks.git').blame_line() end, desc = 'Blame current line' },
-    { '<leader>e', mode = 'n', function () require('snacks.picker').explorer() end, desc = 'Toggle file tree' },
     { '<leader>fd', mode = 'n', function () require('snacks.picker').diagnostics() end, desc = 'Find diagnostics' },
     { '<leader>fG', mode = 'n', function () require('snacks.picker').git_status() end, desc = 'Find modified files' },
     { '<leader>fs', mode = { 'n', 'x' }, function () require('snacks.picker').grep_word({ hidden = true, ignored = true }) end, desc = 'Find word under cursor' },
