@@ -5,7 +5,6 @@ require('which-key').add({
   { '<leader>f', group = 'Find' },
   { '<leader>g', group = 'Grapple' },
   { '<leader>h', group = 'Git' },
-  { '<leader>p', group = 'Portal', icon = ' ' },
   { '<leader><S-q>', group = 'Quickfix', icon = ' ' },
 })
 

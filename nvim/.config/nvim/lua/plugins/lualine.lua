@@ -17,9 +17,14 @@ local function get_lsps()
   return output
 end
 
-local function get_grapple()
-  local key = require("grapple").name_or_index()
-  return "󰛢 [" .. key .. "]"
+local function get_trailblazer_stack_name()
+  local stack_name = require('trailblazer.trails.stacks').current_trail_mark_stack_name;
+
+  if stack_name then
+    return 'Stack: ' .. stack_name
+  else
+    return ''
+  end
 end
 
 local function maximize_status()
@@ -36,6 +41,7 @@ return {
   dependencies = {
     'declancm/maximize.nvim',
     'f-person/git-blame.nvim',
+    'LeonHeidelbach/trailblazer.nvim',
   },
   opts = function (_, opts)
     local gitblame = require 'gitblame'
@@ -83,7 +89,7 @@ return {
         },
       },
       lualine_y = {
-        { get_grapple, cond = require('grapple').exists },
+        { get_trailblazer_stack_name },
       },
       lualine_z = {
         {
