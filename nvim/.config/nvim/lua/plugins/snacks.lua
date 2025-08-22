@@ -37,23 +37,16 @@ return {
         frecency = true,
       },
       sources = {
-        explorer = {
-          auto_close = true,
-          git_status_open = true,
-          hidden = true,
-          ignored = true,
-          layout = {
-            preset = 'default',
-            preview = true,
-            layout = {
-              width = 0.95,
-              height = 0.9,
-            },
-          },
+        buffers = {
           win = {
+            input = {
+              keys = {
+                ['<c-x>'] = { 'bufdelete', mode = { 'n', 'i' } },
+              },
+            },
             list = {
               keys = {
-                ['<c-c>'] = { 'close', mode = { 'n', 'i' } },
+                ['dd'] = 'bufdelete',
               },
             },
           },
