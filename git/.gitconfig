@@ -1,9 +1,16 @@
 [user]
     name = Nimjii
     email = lspreitzer525@gmail.com
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEi+PliWQHfzEd4cHht/w2gzX1bJ1kp/5SR8QFWnIKR8
 [core]
     autocrlf = input
     filemode = true
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    program = "/opt/1Password/op-ssh-sign"
+[commit]
+    gpgSign = true
 [pull]
     rebase = true
 [alias]
