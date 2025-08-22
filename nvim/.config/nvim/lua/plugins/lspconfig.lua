@@ -37,14 +37,16 @@ return {
           end
         end
 
-        require('which-key').add({
+        require('which-key').add {
           { '<leader>l', group = 'LSP', icon = '󰚔' },
           { '<leader>lr', vim.lsp.buf.rename, desc = 'Rename symbol' },
           { '<leader>la', vim.lsp.buf.code_action, desc = 'Code action' },
           { '<leader>lf', vim.lsp.buf.format, desc = 'Format buffer' },
-        })
+        }
 
-        vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = event.buf, desc = 'LSP: Hover documentation' })
+        vim.keymap.set('n', 'K', function()
+          vim.lsp.buf.hover { border = 'rounded' }
+        end, { buffer = event.buf, desc = 'LSP: Hover documentation' })
 
         local client = vim.lsp.get_client_by_id(event.data.client_id)
 
