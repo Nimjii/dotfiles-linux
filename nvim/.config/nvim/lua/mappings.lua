@@ -3,8 +3,7 @@
 -- Mapping groups
 require('which-key').add({
   { '<leader>f', group = 'Find' },
-  { '<leader>g', group = 'Grapple' },
-  { '<leader>h', group = 'Git' },
+  { '<leader>g', group = 'Git' },
   { '<leader><S-q>', group = 'Quickfix', icon = ' ' },
 })
 

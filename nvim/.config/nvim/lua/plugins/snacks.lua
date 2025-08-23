@@ -106,8 +106,8 @@ return {
     { '<leader>fF', mode = 'n', function () require('snacks.picker').files({ hidden = true, ignored = true }) end, desc = 'Find all files' },
     { '<leader>/', mode = 'n', function () require('snacks.picker').grep({ hidden = true }) end, desc = 'Search in files' },
     { '<leader>fw', mode = 'n', function () require('snacks.picker').grep({ hidden = true, ignored = true }) end, desc = 'Search in all files' },
-    { '<leader>ho', mode = 'n', function () require('snacks.gitbrowse').open({ what = 'commit' }) end, desc = 'Open commit url' },
-    { '<leader>hf', mode = 'n', function () require('snacks.gitbrowse').open() end, desc = 'Open file url' },
+    { '<leader>go', mode = 'n', function () require('snacks.gitbrowse').open({ what = 'commit' }) end, desc = 'Open commit url' },
+    { '<leader>gf', mode = 'n', function () require('snacks.gitbrowse').open() end, desc = 'Open file url' },
     { '<F7>', mode = { 'n', 'i' }, function () require('snacks').terminal() end, desc = 'Floating terminal' },
   },
 }
