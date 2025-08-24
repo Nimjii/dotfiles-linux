@@ -19,4 +19,19 @@
 [rerere]
     enabled = true
 [init]
-	defaultBranch = main
+    defaultBranch = main
+[diff]
+    tool = nvimdiff
+[difftool]
+    prompt = false
+    trustExitCode = true
+[difftool "nvimdiff"]
+    cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+[merge]
+    tool = nvimmerge
+[mergetool]
+    keepBackup = false
+    prompt = false
+    trustExitCode = true
+[mergetool "nvimmerge"]
+    cmd = nvim -d \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" -c \"wincmd J\"

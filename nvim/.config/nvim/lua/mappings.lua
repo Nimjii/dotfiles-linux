@@ -57,7 +57,7 @@ vim.keymap.set('n', '[t', function () vim.cmd.tabprevious() end, { desc = 'Previ
 -- Buffer mappings
 vim.keymap.set('n', '<leader>w', '<cmd>w<cr>', { desc = 'Save' })
 vim.keymap.set('n', '<leader>W', '<cmd>noa w<cr>', { desc = 'Save (no autocommands)' })
-vim.keymap.set('n', '<leader>q', '<cmd>confirm q<cr>', { desc = 'Quit' })
+vim.keymap.set('n', '<leader>q', '<cmd>confirm qa<cr>', { desc = 'Quit' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
