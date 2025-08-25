@@ -13,9 +13,11 @@ vim.o.hlsearch = true
 vim.o.ignorecase = true
 vim.o.mouse = 'a'
 vim.o.pumblend = 1
+vim.o.relativenumber = true
 vim.o.scrolloff = 8
 vim.o.shiftwidth = 4
 vim.o.sidescrolloff = 8
+vim.o.signcolumn= 'yes'
 vim.o.smartcase = true
 vim.o.softtabstop = 4
 vim.o.tabstop = 4
@@ -24,10 +26,6 @@ vim.o.timeoutlen = 500
 vim.o.undofile = true
 vim.o.updatetime = 250
 vim.o.wrap = false
-
-vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-vim.wo.relativenumber= true
-vim.wo.signcolumn= 'yes'
 
 vim.g.netrw_localcopydircmd = 'cp -r'
 
