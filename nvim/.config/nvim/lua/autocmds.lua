@@ -16,3 +16,11 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.keymap.set({ 'n' }, '<leader>e', '<cmd>bd<cr>', { buffer = true, desc = 'Close netrw' })
   end,
 })
+
+-- [[ Start treesitter ]]
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { '*' },
+  callback = function (args)
+    pcall(vim.treesitter.start, args.buf)
+  end,
+})

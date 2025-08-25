@@ -25,6 +25,7 @@ vim.o.undofile = true
 vim.o.updatetime = 250
 vim.o.wrap = false
 
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.wo.relativenumber= true
 vim.wo.signcolumn= 'yes'
 
