@@ -84,6 +84,7 @@ return {
     }
 
     local servers = {
+      clangd = {},
       gopls = {},
       rust_analyzer = {},
 
