@@ -2,11 +2,7 @@ display_full_path = true
 
 [[search_dirs]]
 path = "/home/lspreitzer/projects"
-depth = 10
-
-[[search_dirs]]
-path = "/home/lspreitzer/exercism"
-depth = 10
+depth = 5
 
 [[search_dirs]]
 path = "/home/lspreitzer/dotfiles"
