@@ -86,7 +86,9 @@ return {
     local servers = {
       clangd = {},
       gopls = {},
+      jdtls = {},
       rust_analyzer = {},
+      ts_ls = {},
 
       lua_ls = {
         settings = {
