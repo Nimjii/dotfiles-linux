@@ -18,9 +18,11 @@ vim.opt.rtp:prepend(lazypath)
 
 --[[ Install plugins ]]
 require('lazy').setup({
-  { import = 'plugins' },
-
+  'tpope/vim-repeat',
+  'tpope/vim-surround',
   'tpope/vim-sleuth',
+
+  { import = 'plugins' },
 }, {})
 
 -- uses which-key so it has to be called after plugins have been installed
