@@ -31,11 +31,6 @@ local function maximize_status()
   return vim.t.maximized and '󰁌' or ''
 end
 
-local function pin_status()
-  local buf = vim.api.nvim_get_current_buf()
-  return require('hbac.state').is_pinned(buf) and '' or ''
-end
-
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = {
@@ -57,9 +52,9 @@ return {
     }
 
     opts.sections = {
-      lualine_a = {'mode'},
+      lualine_a = { 'mode' },
       lualine_b = {'diff', 'diagnostics'},
-      lualine_c = {},
+      lualine_c = { 'searchcount' },
       lualine_x = {
         {
           gitblame.get_current_blame_text,
@@ -78,7 +73,6 @@ return {
       lualine_c = {},
       lualine_x = {
         maximize_status,
-        pin_status,
         {
           'filename',
           newfile_status = true,
@@ -88,9 +82,7 @@ return {
           },
         },
       },
-      lualine_y = {
-        { get_trailblazer_stack_name },
-      },
+      lualine_y = { get_trailblazer_stack_name },
       lualine_z = {
         {
           'tabs',
