@@ -1,7 +1,7 @@
 -- leap.lua
 
 return {
-  'ggandor/leap.nvim',
+  url = 'https://codeberg.org/andyg/leap.nvim',
   config = function()
     local leap = require 'leap'
     local remote = require 'leap.remote'
