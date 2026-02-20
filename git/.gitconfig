@@ -4,6 +4,7 @@
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEi+PliWQHfzEd4cHht/w2gzX1bJ1kp/5SR8QFWnIKR8
 [core]
     autocrlf = input
+    editor = "nvim"
     filemode = true
 [gpg]
     format = ssh
@@ -24,7 +25,7 @@
     prompt = false
     trustExitCode = true
 [difftool "nvimdiff"]
-    cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [merge]
     tool = nvimmerge
 [mergetool]
@@ -32,4 +33,4 @@
     prompt = false
     trustExitCode = true
 [mergetool "nvimmerge"]
-    cmd = nvim -d \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" -c \"wincmd J\"
+    cmd = "nvim -d \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" -c \"wincmd J\""

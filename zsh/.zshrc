@@ -16,7 +16,10 @@ path=("/home/lspreitzer/.local/bin" $path)
 path=("/usr/lib/jvm/default/bin" $path)
 
 export PATH
+
+export EDITOR=nvim
 export SSH_AUTH_SOCK=/home/lspreitzer/.ssh/proton-pass-agent.sock
+export VISUAL=nvim
 
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
